@@ -41,6 +41,14 @@ public class TbUserSqlProvider {
             sql.VALUES("age", "#{age,jdbcType=INTEGER}");
         }
 
+        if (record.getIp() != null) {
+            sql.VALUES("ip", "#{ip,jdbcType=VARCHAR}");
+        }
+
+        if (record.getRemark() != null) {
+            sql.VALUES("remark", "#{remark,jdbcType=VARCHAR}");
+        }
+
         if (record.getValidInd() != null) {
             sql.VALUES("valid_ind", "#{validInd,jdbcType=INTEGER}");
         }
@@ -66,6 +74,8 @@ public class TbUserSqlProvider {
         sql.SELECT("name");
         sql.SELECT("sex");
         sql.SELECT("age");
+        sql.SELECT("ip");
+        sql.SELECT("remark");
         sql.SELECT("valid_ind");
         sql.SELECT("create_time");
         sql.SELECT("modify_time");
@@ -102,6 +112,14 @@ public class TbUserSqlProvider {
             sql.SET("age = #{record.age,jdbcType=INTEGER}");
         }
 
+        if (record.getIp() != null) {
+            sql.SET("ip = #{record.ip,jdbcType=VARCHAR}");
+        }
+
+        if (record.getRemark() != null) {
+            sql.SET("remark = #{record.remark,jdbcType=VARCHAR}");
+        }
+
         if (record.getValidInd() != null) {
             sql.SET("valid_ind = #{record.validInd,jdbcType=INTEGER}");
         }
@@ -126,6 +144,8 @@ public class TbUserSqlProvider {
         sql.SET("name = #{record.name,jdbcType=VARCHAR}");
         sql.SET("sex = #{record.sex,jdbcType=VARCHAR}");
         sql.SET("age = #{record.age,jdbcType=INTEGER}");
+        sql.SET("ip = #{record.ip,jdbcType=VARCHAR}");
+        sql.SET("remark = #{record.remark,jdbcType=VARCHAR}");
         sql.SET("valid_ind = #{record.validInd,jdbcType=INTEGER}");
         sql.SET("create_time = #{record.createTime,jdbcType=TIMESTAMP}");
         sql.SET("modify_time = #{record.modifyTime,jdbcType=TIMESTAMP}");
@@ -149,6 +169,14 @@ public class TbUserSqlProvider {
 
         if (record.getAge() != null) {
             sql.SET("age = #{age,jdbcType=INTEGER}");
+        }
+
+        if (record.getIp() != null) {
+            sql.SET("ip = #{ip,jdbcType=VARCHAR}");
+        }
+
+        if (record.getRemark() != null) {
+            sql.SET("remark = #{remark,jdbcType=VARCHAR}");
         }
 
         if (record.getValidInd() != null) {

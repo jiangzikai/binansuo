@@ -11,6 +11,10 @@ public class TbUser {
 
     private Integer age;
 
+    private String ip;
+
+    private String remark;
+
     private Integer validInd;
 
     private Date createTime;
@@ -47,6 +51,22 @@ public class TbUser {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getIp() {
+        return ip;
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip;
+    }
+
+    public String getRemark() {
+        return remark;
+    }
+
+    public void setRemark(String remark) {
+        this.remark = remark;
     }
 
     public Integer getValidInd() {

@@ -365,6 +365,146 @@ public class TbUserExample {
             return (Criteria) this;
         }
 
+        public Criteria andIpIsNull() {
+            addCriterion("ip is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpIsNotNull() {
+            addCriterion("ip is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpEqualTo(String value) {
+            addCriterion("ip =", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpNotEqualTo(String value) {
+            addCriterion("ip <>", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpGreaterThan(String value) {
+            addCriterion("ip >", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpGreaterThanOrEqualTo(String value) {
+            addCriterion("ip >=", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpLessThan(String value) {
+            addCriterion("ip <", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpLessThanOrEqualTo(String value) {
+            addCriterion("ip <=", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpLike(String value) {
+            addCriterion("ip like", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpNotLike(String value) {
+            addCriterion("ip not like", value, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpIn(List<String> values) {
+            addCriterion("ip in", values, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpNotIn(List<String> values) {
+            addCriterion("ip not in", values, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpBetween(String value1, String value2) {
+            addCriterion("ip between", value1, value2, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andIpNotBetween(String value1, String value2) {
+            addCriterion("ip not between", value1, value2, "ip");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIsNull() {
+            addCriterion("remark is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIsNotNull() {
+            addCriterion("remark is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkEqualTo(String value) {
+            addCriterion("remark =", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotEqualTo(String value) {
+            addCriterion("remark <>", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkGreaterThan(String value) {
+            addCriterion("remark >", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkGreaterThanOrEqualTo(String value) {
+            addCriterion("remark >=", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLessThan(String value) {
+            addCriterion("remark <", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLessThanOrEqualTo(String value) {
+            addCriterion("remark <=", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkLike(String value) {
+            addCriterion("remark like", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotLike(String value) {
+            addCriterion("remark not like", value, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkIn(List<String> values) {
+            addCriterion("remark in", values, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotIn(List<String> values) {
+            addCriterion("remark not in", values, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkBetween(String value1, String value2) {
+            addCriterion("remark between", value1, value2, "remark");
+            return (Criteria) this;
+        }
+
+        public Criteria andRemarkNotBetween(String value1, String value2) {
+            addCriterion("remark not between", value1, value2, "remark");
+            return (Criteria) this;
+        }
+
         public Criteria andValidIndIsNull() {
             addCriterion("valid_ind is null");
             return (Criteria) this;
