@@ -7,11 +7,14 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.Date;
 
 /**
@@ -20,6 +23,8 @@ import java.util.Date;
 @RestController
 @Api(value = "UserController", tags = {"用户控制器"})
 public class UserController {
+    @Value("${server.port}")
+    private String port;
 
     @Autowired
     private UserService userService;
@@ -29,11 +34,17 @@ public class UserController {
      */
     @RequestMapping(value = "saveUser",method = RequestMethod.POST)
     @ApiOperation(value = "这个方法是保存用户信息")
-    public void saveUser(@RequestBody TbUserDTO tbUserDTO){
+    public void saveUser(@RequestBody TbUserDTO tbUserDTO) throws UnknownHostException {
+        //ip地址
+        InetAddress address = InetAddress.getLocalHost();
+        String ip = address.getHostAddress();
+
         TbUser tbuser = new TbUser();
         BeanUtils.copyProperties(tbUserDTO,tbuser);
         tbuser.setValidInd(1);
         tbuser.setCreateTime(new Date());
+        tbuser.setIp(ip+"."+port);
+
         userService.saveUser(tbuser);
         System.out.println("用户信息保存:"+tbuser.getName());
     }
