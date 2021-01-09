@@ -35,15 +35,12 @@ public class UserController {
     @RequestMapping(value = "saveUser",method = RequestMethod.POST)
     @ApiOperation(value = "这个方法是保存用户信息")
     public void saveUser(@RequestBody TbUserDTO tbUserDTO) throws UnknownHostException {
-        //ip地址
-        InetAddress address = InetAddress.getLocalHost();
-        String ip = address.getHostAddress();
 
         TbUser tbuser = new TbUser();
         BeanUtils.copyProperties(tbUserDTO,tbuser);
         tbuser.setValidInd(1);
         tbuser.setCreateTime(new Date());
-        tbuser.setIp(ip+"."+port);
+        tbuser.setIp(port);
 
         userService.saveUser(tbuser);
         System.out.println("用户信息保存:"+tbuser.getName());
